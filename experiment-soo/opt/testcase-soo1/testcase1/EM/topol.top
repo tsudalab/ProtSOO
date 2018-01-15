@@ -1,0 +1,19 @@
+;
+;	File 'topol.top' was generated
+;
+
+; Include forcefield parameters
+#include "ffoplsaa.itp"
+#include "PTFE.itp"
+#include "LYZ.itp"
+
+[ system ]
+; Name
+LYSOZYME on PTFE
+
+[ molecules ]
+; Compound        #mols
+LYZ                 1
+PTS                729
+
+

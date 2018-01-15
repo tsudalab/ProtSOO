@@ -1,0 +1,49 @@
+# This file was created Sat Mar 11 01:33:06 2017
+# Created by:
+#         :-) GROMACS - gmx energy, VERSION 5.1.4 (double precision) (-:
+# 
+# Executable:   /home/z-hou/soft/gromacs/gmx-double-MPI/bin/gmx_mpi_d
+# Data prefix:  /home/z-hou/soft/gromacs/gmx-double-MPI
+# Command line:
+#   gmx energy -f ener.edr -o energy.xvg
+# gmx energy is part of G R O M A C S:
+#
+# Getting the Right Output Means no Artefacts in Calculating Stuff
+#
+@    title "GROMACS Energies"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "(kJ/mol)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Coul-SR:Protein-PTS"
+@ s1 legend "LJ-SR:Protein-PTS"
+    0.000000  -763.428337   46.047347
+    1.000000  -759.638459   38.932775
+    2.000000  -755.704081    6.925691
+    4.000000  -753.365488    5.696943
+    5.000000  -752.376814    0.738368
+    6.000000  -752.189225   -2.470849
+    8.000000  -750.432194   -4.258512
+   10.000000  -745.444535   -6.761523
+   11.000000  -744.759332   -8.969534
+   12.000000  -745.636756  -11.055420
+   13.000000  -744.499008  -12.792168
+   14.000000  -744.129093  -14.490336
+   15.000000  -743.826903  -15.946403
+   17.000000  -730.121969  -16.654339
+   18.000000  -745.675201  -21.356474
+   19.000000  -745.861629  -22.062578
+   21.000000  -745.938891  -22.769706
+   22.000000  -748.134883  -24.112964
+   23.000000  -747.945976  -24.742682
+   25.000000  -745.857859  -25.318245
+   26.000000  -748.961447  -26.423339
+   27.000000  -754.994956  -27.025654
+   28.000000  -753.629410  -27.832545
+   29.000000  -764.194476  -28.434603
+   31.000000  -764.073001  -28.766056

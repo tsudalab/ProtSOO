@@ -1,0 +1,155 @@
+02-09 22:51:53 INFO     Initialized command line arguments
+02-09 22:51:53 DEBUG    args: Namespace(c1=1.193, c2=1.193, emdir='EM', init=False, jsdbf='db.json', keep_pdb=False, maxitr=0, maxx=5.5, maxy=5.5, maxz=5.5, minx=1.0, miny=1.0, minz=1.0, n=200, offset=None, outdir='pso_conf', proteinf='protein.pdb', r=10, resi=None, surfacef='surface.pdb', w=0.721)
+02-09 22:51:55 INFO     PyMOL environment initialized   
+02-09 22:51:55 DEBUG    searching score.sh...
+02-09 22:51:57 DEBUG    initialized simpleMOVE variables.
+02-09 22:51:57 DEBUG    initialized PSO variables: {'v': array([[ 1.,  1.,  1.,  1.,  1.,  1.],
+       [ 1.,  1.,  1.,  1.,  1.,  1.],
+       [ 1.,  1.,  1.,  1.,  1.,  1.],
+       ..., 
+       [ 1.,  1.,  1.,  1.,  1.,  1.],
+       [ 1.,  1.,  1.,  1.,  1.,  1.],
+       [ 1.,  1.,  1.,  1.,  1.,  1.]]), 'xrangeb': [360.0, 360.0, 360.0, 5.5, 5.5, 5.5], 'parser': ArgumentParser(prog='', usage=None, description='This is PSO testing', version=None, formatter_class=<class 'argparse.HelpFormatter'>, conflict_handler='error', add_help=True), 'slogn': 'score.log', 'topol': [], 'initpg': <argparse._MutuallyExclusiveGroup object at 0x10cbc31d0>, 'moddir': '/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/', 'pbestx': array([[ 0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0.,  0.,  0.,  0.,  0.,  0.],
+       ..., 
+       [ 0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0.,  0.,  0.,  0.,  0.,  0.]]), 'energyx': 'energy.xvg', 'pbests': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 'maxv': [36.0, 36.0, 36.0, 0.45, 0.45, 0.45], 'miniZdistR': 0, 'coff': 20, 'xrangea': [0.0, 0.0, 0.0, 1.0, 1.0, 1.0], 'gbestf': '', 'args': Namespace(c1=1.193, c2=1.193, emdir='EM', init=False, jsdbf='db.json', keep_pdb=False, maxitr=0, maxx=5.5, maxy=5.5, maxz=5.5, minx=1.0, miny=1.0, minz=1.0, n=200, offset=None, outdir='pso_conf', proteinf='protein.pdb', r=10, resi=None, surfacef='surface.pdb', w=0.721), 'testname': 'yes, I am simpleMOVE.', 'gbestn': 99, 'gbests': 0.0, 'svcount': 0, 'gbestx': array([ 0.,  0.,  0.,  0.,  0.,  0.]), 'xyzcv': ['x', 'y', 'z'], 'bash': '/bin/bash', 'runsh': 'score.sh', 'dimen': 6, 'ctlvs': 10, 'cmd': <module 'pymol.cmd' from '/usr/local/lib/python2.7/site-packages/pymol/cmd.pyc'>, 'systemfn': 'system', 'mdir': 'EM', 'xyzid': {'y': 1, 'x': 0, 'z': 2}, 'runshp': 'score.sh', 'x': array([[ 0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0.,  0.,  0.,  0.,  0.,  0.],
+       ..., 
+       [ 0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0.,  0.,  0.,  0.,  0.,  0.]]), 'atom_cutoff': 7}
+02-09 22:51:57 DEBUG    Trying to load json db file.
+02-09 22:51:57 INFO     Could not find previous json db, initialized a new one 
+02-09 22:51:57 INFO     Initialized simpleMOVE objects
+02-09 22:51:57 INFO     Initialized simplePSO object 
+02-09 22:51:57 DEBUG    Protein Surface adsorption PSO search algorithm
+02-09 22:51:57 DEBUG    はじまるよ～♪ 
+02-09 22:51:57 DEBUG    loading protein.pdb
+02-16 14:54:49 INFO     Initialized command line arguments
+02-16 14:54:49 DEBUG    args: Namespace(c1=1.193, c2=1.193, emdir='EM', init=False, jsdbf='db.json', keep_pdb=False, maxitr=0, maxx=5.5, maxy=5.5, maxz=5.5, minx=1.0, miny=1.0, minz=1.0, n=200, offset=None, outdir='pso_conf', proteinf='protein.pdb', r=10, resi=None, surfacef='surface.pdb', w=0.721)
+02-16 14:54:51 INFO     PyMOL environment initialized   
+02-16 14:54:51 DEBUG    searching score.sh...
+02-16 14:54:51 DEBUG    /Users/yang/opt/score.sh was found!
+02-16 14:54:51 DEBUG    /Users/yang/opt/testcase/score.sh was found!
+02-16 14:54:56 DEBUG    initialized simpleMOVE variables.
+02-16 14:54:56 DEBUG    initialized PSO variables: {'v': array([[ 1.,  1.,  1.,  1.,  1.,  1.],
+       [ 1.,  1.,  1.,  1.,  1.,  1.],
+       [ 1.,  1.,  1.,  1.,  1.,  1.],
+       ..., 
+       [ 1.,  1.,  1.,  1.,  1.,  1.],
+       [ 1.,  1.,  1.,  1.,  1.,  1.],
+       [ 1.,  1.,  1.,  1.,  1.,  1.]]), 'xrangeb': [360.0, 360.0, 360.0, 5.5, 5.5, 5.5], 'parser': ArgumentParser(prog='simplePSO.py', usage=None, description='This is PSO testing', version=None, formatter_class=<class 'argparse.HelpFormatter'>, conflict_handler='error', add_help=True), 'slogn': 'score.log', 'topol': [], 'initpg': <argparse._MutuallyExclusiveGroup object at 0x1028fe090>, 'moddir': '/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/', 'pbestx': array([[ 0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0.,  0.,  0.,  0.,  0.,  0.],
+       ..., 
+       [ 0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0.,  0.,  0.,  0.,  0.,  0.]]), 'energyx': 'energy.xvg', 'pbests': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 'maxv': [36.0, 36.0, 36.0, 0.45, 0.45, 0.45], 'miniZdistR': 0, 'coff': 20, 'xrangea': [0.0, 0.0, 0.0, 1.0, 1.0, 1.0], 'gbestf': '', 'args': Namespace(c1=1.193, c2=1.193, emdir='EM', init=False, jsdbf='db.json', keep_pdb=False, maxitr=0, maxx=5.5, maxy=5.5, maxz=5.5, minx=1.0, miny=1.0, minz=1.0, n=200, offset=None, outdir='pso_conf', proteinf='protein.pdb', r=10, resi=None, surfacef='surface.pdb', w=0.721), 'testname': 'yes, I am simpleMOVE.', 'gbestn': 99, 'gbests': 0.0, 'svcount': 0, 'gbestx': array([ 0.,  0.,  0.,  0.,  0.,  0.]), 'xyzcv': ['x', 'y', 'z'], 'bash': '/bin/bash', 'runsh': 'score.sh', 'dimen': 6, 'ctlvs': 10, 'cmd': <module 'pymol.cmd' from '/usr/local/lib/python2.7/site-packages/pymol/cmd.pyc'>, 'systemfn': 'system', 'mdir': 'EM', 'xyzid': {'y': 1, 'x': 0, 'z': 2}, 'runshp': '/Users/yang/opt/testcase/score.sh', 'x': array([[ 0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0.,  0.,  0.,  0.,  0.,  0.],
+       ..., 
+       [ 0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0.,  0.,  0.,  0.,  0.,  0.]]), 'atom_cutoff': 7}
+02-16 14:54:56 DEBUG    Trying to load json db file.
+02-16 14:54:56 INFO     Could not find previous json db, initialized a new one 
+02-16 14:54:56 INFO     Initialized simpleMOVE objects
+02-16 14:54:56 INFO     Initialized simplePSO object 
+02-16 14:54:56 DEBUG    Protein Surface adsorption PSO search algorithm
+02-16 14:54:56 DEBUG    はじまるよ～♪ 
+02-16 14:54:56 DEBUG    loading protein.pdb
+02-16 18:02:10 INFO     PyMOL environment initialized   
+02-16 18:02:10 INFO     PyMOL environment initialized   
+02-16 18:02:10 DEBUG    searching score.sh...
+02-16 18:02:10 DEBUG    searching score.sh...
+02-16 18:02:10 DEBUG    /Users/yang/opt/score.sh was found!
+02-16 18:02:10 DEBUG    /Users/yang/opt/score.sh was found!
+02-16 18:02:10 DEBUG    /Users/yang/opt/testcase/score.sh was found!
+02-16 18:02:10 DEBUG    /Users/yang/opt/testcase/score.sh was found!
+02-16 18:02:12 DEBUG    initialized simpleMOVE variables.
+02-16 18:02:12 DEBUG    initialized simpleMOVE variables.
+02-16 18:02:12 INFO     Can not find previous json db, initial a new one.
+02-16 18:02:12 INFO     Can not find previous json db, initial a new one.
+02-16 18:02:12 INFO     Initialized simpleMOVE objects
+02-16 18:02:12 INFO     Initialized simpleMOVE objects
+02-16 18:04:04 INFO     PyMOL environment initialized   
+02-16 18:04:04 DEBUG    searching score.sh...
+02-16 18:04:04 DEBUG    /Users/yang/opt/score.sh was found!
+02-16 18:04:04 DEBUG    /Users/yang/opt/testcase/score.sh was found!
+02-16 18:04:07 DEBUG    initialized simpleMOVE variables.
+02-16 18:04:07 INFO     Can not find previous json db, initial a new one.
+02-16 18:04:07 INFO     Initialized simpleMOVE objects
+02-16 18:04:07 INFO     Initialized simplePSO object 
+02-16 18:04:07 INFO     Starting the main function...
+02-16 18:06:22 INFO     PyMOL environment initialized   
+02-16 18:06:22 DEBUG    searching score.sh...
+02-16 18:06:23 DEBUG    /Users/yang/opt/score.sh was found!
+02-16 18:06:23 DEBUG    /Users/yang/opt/testcase/score.sh was found!
+02-16 18:06:25 DEBUG    initialized simpleMOVE variables.
+02-16 18:06:25 INFO     Can not find previous json db, initial a new one.
+02-16 18:06:25 INFO     Initialized simpleMOVE objects
+02-16 18:06:25 INFO     Initialized simplePSO object 
+02-16 18:06:25 DEBUG    Protein Surface adsorption PSO search algorithm
+02-16 18:06:25 DEBUG    loading protein.pdb
+02-16 18:08:48 INFO     PyMOL environment initialized   
+02-16 18:08:48 DEBUG    searching score.sh...
+02-16 18:08:49 DEBUG    /Users/yang/opt/score.sh was found!
+02-16 18:08:49 DEBUG    /Users/yang/opt/testcase/score.sh was found!
+02-16 18:08:51 DEBUG    initialized simpleMOVE variables.
+02-16 18:08:51 INFO     Can not find previous json db, initial a new one.
+02-16 18:08:51 INFO     Initialized simpleMOVE objects
+02-16 18:08:51 INFO     Initialized simplePSO object 
+02-16 18:08:51 DEBUG    Protein Surface adsorption PSO search algorithm
+02-16 18:08:51 DEBUG    loading protein.pdb
+02-16 18:12:47 INFO     Initialized command line arguments
+02-16 18:12:47 DEBUG    args: Namespace(c1=1.193, c2=1.193, emdir='EM', init=False, jsdbf='db.json', keep_pdb=False, maxitr=0, n=200, offset=None, outdir='pso_conf', proteinf='protein.pdb', r=10, resi=None, surfacef='surface.pdb', w=0.721)
+02-16 18:12:48 INFO     PyMOL environment initialized   
+02-16 18:12:48 DEBUG    searching score.sh...
+02-16 18:12:49 DEBUG    /Users/yang/opt/score.sh was found!
+02-16 18:12:49 DEBUG    /Users/yang/opt/testcase/score.sh was found!
+02-16 18:12:51 DEBUG    initialized simpleMOVE variables.
+02-16 18:12:51 INFO     Can not find previous json db, initial a new one.
+02-16 18:12:51 INFO     Initialized simpleMOVE objects
+02-16 18:12:51 INFO     Initialized simplePSO object 
+02-16 18:12:51 DEBUG    Protein Surface adsorption PSO search algorithm
+02-16 18:12:51 DEBUG    loading protein.pdb
+02-16 18:14:23 INFO     Initialized command line arguments
+02-16 18:14:23 DEBUG    args: Namespace(c1=1.193, c2=1.193, emdir='EM', init=False, jsdbf='db.json', keep_pdb=False, maxitr=0, n=200, offset=None, outdir='pso_conf', proteinf='protein.pdb', r=10, resi=None, surfacef='surface.pdb', w=0.721)
+02-16 18:14:24 INFO     PyMOL environment initialized   
+02-16 18:14:24 DEBUG    searching score.sh...
+02-16 18:14:25 DEBUG    /Users/yang/opt/score.sh was found!
+02-16 18:14:25 DEBUG    /Users/yang/opt/testcase/score.sh was found!
+02-16 18:14:27 DEBUG    initialized simpleMOVE variables.
+02-16 18:14:27 INFO     Can not find previous json db, initial a new one.
+02-16 18:14:27 INFO     Initialized simpleMOVE objects
+02-16 18:14:27 INFO     Initialized simplePSO object 
+02-16 18:14:47 INFO     Initialized command line arguments
+02-16 18:14:47 DEBUG    args: Namespace(c1=1.193, c2=1.193, emdir='EM', init=False, jsdbf='db.json', keep_pdb=False, maxitr=0, n=200, offset=None, outdir='pso_conf', proteinf='protein.pdb', r=10, resi=None, surfacef='surface.pdb', w=0.721)
+02-16 18:14:48 INFO     PyMOL environment initialized   
+02-16 18:14:48 DEBUG    searching score.sh...
+02-16 18:14:49 DEBUG    /Users/yang/opt/score.sh was found!
+02-16 18:14:49 DEBUG    /Users/yang/opt/testcase/score.sh was found!
+02-16 18:14:49 DEBUG    initialized simpleMOVE variables.
+02-16 18:14:49 INFO     Can not find previous json db, initial a new one.
+02-16 18:14:49 INFO     Initialized simpleMOVE objects
+02-16 18:14:49 INFO     Initialized simplePSO object 
+02-16 18:14:49 INFO     Starting the main function...
+02-16 18:16:11 INFO     Initialized command line arguments
+02-16 18:16:11 DEBUG    args: Namespace(c1=1.193, c2=1.193, emdir='EM', init=False, jsdbf='db.json', keep_pdb=False, maxitr=0, n=200, offset=None, outdir='pso_conf', proteinf='protein.pdb', r=10, resi=None, surfacef='surface.pdb', w=0.721)
+02-16 18:16:12 INFO     PyMOL environment initialized   
+02-16 18:16:12 DEBUG    searching score.sh...
+02-16 18:16:12 DEBUG    /Users/yang/opt/score.sh was found!
+02-16 18:16:12 DEBUG    /Users/yang/opt/testcase/score.sh was found!
+02-16 18:16:14 DEBUG    initialized simpleMOVE variables.
+02-16 18:16:14 INFO     Can not find previous json db, initial a new one.
+02-16 18:16:14 INFO     Initialized simpleMOVE objects
+02-16 18:16:14 INFO     Initialized simplePSO object 
+02-16 18:16:14 DEBUG    loading protein.pdb
+02-16 19:10:44 INFO     Initialized command line arguments
+02-16 19:10:45 DEBUG    args: Namespace(c1=1.193, c2=1.193, emdir='EM', init=False, jsdbf='db.json', keep_pdb=False, maxitr=0, n=200, offset=None, outdir='pso_conf', proteinf='protein.pdb', r=10, resi=None, surfacef='surface.pdb', w=0.721)
+11-28 22:45:25 DEBUG    args: Namespace(c1=1.193, c2=1.193, emdir='EM', init=False, jsdbf='db.json', keep_pdb=False, maxitr=0, n=200, offset=None, outdir='pso_conf', proteinf='protein.pdb', r=10, resi=None, surfacef='surface.pdb', w=0.721)
+11-28 22:46:31 DEBUG    args: Namespace(c1=1.193, c2=1.193, emdir='EM', init=False, jsdbf='db.json', keep_pdb=False, maxitr=0, n=200, offset=None, outdir='pso_conf', proteinf='protein.pdb', r=10, resi=None, surfacef='surface.pdb', w=0.721)

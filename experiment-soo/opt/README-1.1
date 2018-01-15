@@ -1,0 +1,419 @@
+=======================================================================
+ProtPOS version 1.1
+
+Computational Biology and Bioinformatics Lab (CBBio)                        
+Faculty of Science and Technology
+University of Macau
+http://cbbio.cis.umac.mo
+
+For support, please contact: jimmycfngai@gmail.com, shirleysiu@umac.mo
+=======================================================================
+
+ProtPOS is a self-contained, lightweight, and easy-to-use software
+package for predicting the preferred orientation of protein on a given
+surface upon initial adsorption. It searches quickly for the low
+energy protein poses in all translational and rotational degrees of
+freedom of the protein with respect to the surface using particle
+swarm optimization. Each successful run returns the lowest energy 
+orientation of the protein on the surface in PDB format, which is
+readily used for MD simulations. ProtPOS is implemented in Python,
+making use of the PyMOL library for generating protein conformations
+and calling GROMACS externally to calculate protein-surface
+interaction energies.
+
+
+SOFTWARE REQUIREMENT
+==========================
+The following libraries or software are required:
+
+- Python (>=2.7.9)
+    https://www.python.org/
+- NumPy (>=1.8.2)
+    http://www.numpy.org/
+- SciPy (>=0.14.1)
+    https://www.scipy.org/
+- PyMOL (>=1.7.2.1) 
+    https://www.pymol.org/
+- Gromacs (>=4.5.5) 
+    http://www.gromacs.org/
+- GNU Grep (>=2.20)
+    https://www.gnu.org/software/grep/
+- Scikit-learn (sklearn) (>=0.16.1)
+    http://scikit-learn.org/stable/
+- Matplotlib (>=1.4.2)
+    http://matplotlib.org/
+- dvipng
+    https://sourceforge.net/projects/dvipng/
+
+
+INSTALLATION
+==========================
+
+1. Just unpack everything into one single director by running:
+   % tar -zxvf protpos-1.1.tar.gz              
+
+2. Move this directoy to anywhere your system, e.g. :
+   % mv protpos-1.1 $HOME/opt
+
+3. Please make sure your Python has the required python modules
+included. It can be checked by running these commands in the Python
+shell:
+
+   import numpy
+   import pymol
+   import scipy
+   import sklearn
+   import matplotlib
+
+If any of the above failed, download the corresponding package and
+perform installation individually, or an easier way is to first
+install most of the python packages using pip, then install the
+missing one. To do this, please follow the steps below:
+
+ 3.1 Install pip to your python:
+     Download pip from https://bootstrap.pypa.io/get-pip.py
+     % python get-pip.py
+
+ 3.2 Install required python packages using pip: 
+     % pip install numpy==1.8.2 matplotlib==1.5.0 scipy==0.16.1 scikit-learn==0.17 sklearn==0.0
+
+ 3.3 Install PyMOL from source:
+     Download PyMOL from http://sourceforge.net/projects/pymol/files/pymol/
+     % tar -jxvf pymol-v1.7.2.1.tar.bz2 ; cd pymol
+     % python setup.py build install
+
+ 3.4 Install GROMACS 5.0:
+     Follow instructions in 
+     http://www.gromacs.org/Documentation/Installation_Instructions_5.0
+
+ 3.5 Install GNU grep 2.20:
+     Follow instructions in
+     https://www.gnu.org/software/grep/ 
+
+ 3.6 Install dvipng
+     Follow instructions in
+     https://sourceforge.net/projects/dvipng/
+
+An alternative is to install the software through MacPorts or Homebrew
+in Linux, and Fink in Mac. Note that the GNU version of grep, which
+supports Perl expressions, is necessary.
+   
+
+HOW-TO RUN
+==========================
+
+Here we demonstrate running ProtPOS using our test case provided in
+the source package.
+
+1. % cp -r $PROTPOSHOME/testcase . && cd testcase 
+
+2. Edit set-up.sh
+
+   This file contains run and configurational parameters used in
+   ProtPOS. Please update parameters "PROTPOSHOME", "GMXBIN",
+   "PYTHONI" for this test case to run successfully.
+   e.g.
+      export PROTPOSHOME="$HOME/opt/protpos-1.1/"
+      export GMXBIN="$HOME/opt/gromacs-4.5.5/bin/"
+      export PYTHONI="/usr/bin/python"
+
+   For your own run case, please also modify parameters:
+
+      proteinm - name of the protein molecule
+      surfacem - name of the surface molecule
+      protein  - protein PDB file
+      surface  - surface PDB file
+      sysboxs  - simulation box size (X, Y, Z in unit of nm) large 
+                 enough to contain the protein and the surface
+
+3. Edit predict.sh
+
+   This file performs some pre-processing of input files before calling
+   the main program (simplepso). Parameters for PSO conformational search
+   can be given as arguments to the program. For a moderate-size
+   protein-surface system, using 200 particles (--n 200) and convergence
+   criteria of 10 steps (--r 10) were found to be sufficient. Other PSO
+   parameters might slightly affect the time performance but not much
+   on the search result. Protein translational limits should be defined
+   according to the unit cell size of the surface. 
+
+   Required parameters are:
+
+    --maxx, --maxy: (angstrom) upper limit for protein translation in 
+                    X/Y direction (to be defined according to unit cell 
+                    size of the surface)
+
+    --minx, --miny: (angstrom) lower limit for protein translation in 
+                    X/Y direction (to be defined according to unit cell 
+                    size of the surface)
+
+   Optional parameters are:
+   
+    --maxz: (angstrom) upper limit for protein translation in Z direction 
+                    relative to the surface (default=5.5)
+
+    --minz: (angstrom) lower limit for protein translation in Z direction 
+                    relative to the surface (default=1.0)
+
+    --n: number of PSO particles (default=200)
+
+    --w: inertia weight; tendency to perform global search (close to
+         1) or local search (close to 0) on the protein orientational
+         space (default=0.721)
+
+    --c1: cognitive weight; tendency to search in the particle's known
+          low-energy orientational subspace, usually in the range of
+          (0, 2) (default=1.193)
+
+    --c2: social weight; tendency to search in the swarm's known
+          low-energy orientational subspace, usually in the range of
+          (0, 2) (default=1.193)
+
+    --r:  convergence criteria (default=10 steps)
+
+    --resi: protein orientations containing any of the specified
+            contacting residues. For example,
+                residue ID 10 or 20: --resi 10 20
+                residue ID 10 to 15:  --resi {10..15}        
+
+    --init: if set, protein position and orientation with respect to
+            the surface are used as the initial structure for the
+            search (default is unset, means position at center of
+            surface and random orientation). This feature helps to
+            force sampling specific region of the surface
+
+    --offset: (decimal, in format Rx Ry Rz Tx Ty Tz) generate the
+              initial structure by translating and rotating the given
+              protein structure instead of a random orientation
+
+   As PSO algorithm is stochastic, each run may generate a different
+   solution. We suggest you to repeat the main program call 10-15 times and
+   perform clustering analysis to identify unique low-energy protein
+   orientations.
+
+4. Run the test case:
+
+      % ./predict.sh
+ 
+   Below are sample outputs from the test case run (note that for
+   demonstration purpose, the run is delibrately made short by using
+   "--n=3 and --r=2" just to test if the setup has been properly
+   done):
+
+    =====================================================================
+        ProtPOS STARTED @ 2015-11-16 09:09:43
+    =====================================================================
+    removing the previous run output files 
+    the protein is: protein_lyz.pdb
+    the surface is: surface_only.pdb
+    =====================================================================
+        INFO : Initialized command line arguments
+        INFO : PyMOL environment initialized   
+        INFO : Can not find previous json db, initialed a new one 
+        INFO : Initialized simpleMOVE objects
+        INFO : Initialized simplePSO object 
+        INFO : loaded protein and surface pdb files.
+        INFO : The initial structure is created 
+        INFO : 3 birds have been initialized, PSO searching start!
+        INFO : [===PSO===] iteration number: 0
+        INFO : [===PSO===] iteration number: 1
+        INFO : [===PSO===] iteration number: 2
+        INFO : [===PSO===] iteration number: 3
+        INFO : [===PSO===] iteration number: 4
+        INFO : [===PSO===] iteration number: 5
+        INFO : [===PSO===] iteration number: 6
+        INFO : [===PSO===] iteration number: 7
+        INFO : [===PSO===] iteration number: 8
+        INFO : [===PSO===] iteration number: 9
+        INFO : Finally, PSO stop after 10 number of iterations 
+        INFO : Found the best scoring result 
+        INFO : Bird ID: 000
+        INFO : Rotation (deg): x=280.132166516 y=104.570400568 z=95.6839659226
+        INFO : Translation (Ang): x=2.60814866151 y=1.4023842355 z=1.52343195973
+        INFO : Energy (kJ/mol): -707.21842
+        INFO : Output files:
+        INFO : Search history file: db.json
+        INFO : Final gbest structure: gbest.pdb
+        INFO : Starting to analysis the lowest energy orientation and search trajectory           
+        INFO : Final gbest residue min-distance profile:     gbest.txt 
+        INFO : Sorted by the distance of each residue:       gbest_sorted.txt 
+        INFO : Gbest energy evolution:                       gbest_energy.txt
+        INFO : Gbest orientation evolution:                  gbest_vector.txt
+    ======================================================================
+    Packed the run result data into directory: protpos-11160910
+    ======================================================================
+        2015-11-16 09:10:26  @ ProtPOS END    
+    ======================================================================
+
+   All files generated from this run has been packed into a new data
+   directory as displayed at the last few lines of the run
+   console. Useful files include:
+
+   gbest.pdb - predicted structure 
+   gbest.txt - protein residue minimum distance profile to the surface 
+   gbest_sorted.txt - protein residue minimum distance profile to the surface, 
+                      sorted by the distance
+   gbest_energy.txt - the ProtPOS score of gbest as a function of iterations
+   gbest_vector.txt - the orientation vector of gbest as a function of iterations
+   db.json   - the search trajectory file (see below for a more detail description)
+
+
+5. (Optional) Clustering analysis 
+   
+   If ProtPOS was repeated many times, users can perform clustering
+   analysis to identify unique protein orientations with respect to
+   the surface. Clustering of orientations is based on similarity of
+   their residue minimum distance profiles. Here, we apply DBSCAN
+   algorithm to perform clustering.
+
+   To perform clustering on all ProtPOS predictions, add the following
+   to the predict.sh script:
+   
+      EPS=6.0
+      clustering $EPS
+
+   where EPS specifies the neighborhood radius of a cluster. A larger
+   radius considers more distant profile as neighbor, whereas a
+   smaller radius considers only highly similar profiles. 
+
+   A summary of the clustering result and details about individual
+   cluster will be reported. Besides, the cluster minimum distance
+   profiles will be plotted in the file cluster-ID.pdf in the
+   "cluster" subdirectory. Orientations which cannot be classified
+   into any clusters are considered as noise.
+
+
+HOW-TO RUN YOUR OWN CASE
+==========================
+
+The basic run steps are the same as shown in the previous
+section. However, you have to prepare the starting structures for the
+input system in the run directory and their GROMACS topology files in
+the EM subdirectory inside the run directory. Essentially:
+
+my_run_dir/
+    protein.pdb    # 3D structure of the protein only
+    surface.pdb    # 3D structure of the surface only
+    predict.sh     # copy from the testcase directory
+    set-up.sh      # copy from the testcase directory
+
+my_run_dir/EM/
+    em.mdp.tpl   # template file for energy minimization parameters
+    topol.top    # GROMACS topology files such as topol.top and necessary *.itp
+              
+
+Notes: 
+
+- To generate protein topology in GROMACS with standard amino acids,
+  just use the GROMACS tool (pdb2gmx). There is no restriction about the
+  choice of the force field, make your best selection!  
+
+- To generate surface topology for GROMACS, you can either edit it by
+  yourself or use automatic topology builder such as ATB. 
+
+- For generating a surface structure, you may need to write your own
+  script or use commercial software such as BIOVIA Materials Studio.
+  Make sure that the surface and protein structures satisfy the
+  following criteria:
+
+  1. The surface plane should be parallel to the XY plane of the
+  coordinate system; the surface normal should be parallel to the Z
+  axis. Protein adsorption will be predicted on the upper surface
+  plane.
+
+  2. The protein can be oriented arbitrarily. However, if a specific
+  protein position with respect to the surface (e.g. location on a
+  nonhomogenous surface) is to be used as the starting structure, the
+  same coordinate system of the surface structure is assumed for
+  the protein structure.
+         
+  3. The X and Y dimensions of the surface should be greater than or
+  equal to the largest dimension of the protein plus 2.0 nm to prevent
+  the periodic image artefact in energy calculations.
+
+  4. The X and Y values of the sysboxs parameter should equal to or
+  greater than the X and Y dimensions of the surface, respectively,
+  whereas the Z value should be greater than or equal to the largest
+  dimension of the protein plus the Z dimension of the surface plus
+  3.0 nm, which is to allow sufficient space for vertical translation
+  of the protein during the search.
+
+- For adjusting energy minimization parameters such as emtol, emstep,
+  nsteps, please modify the file em.mdp.tpl. This file is used as the
+  template to generate actual mdp file for the energy minimization
+  calculation in GROMACS during ProtPOS run.
+
+Once all files are ready, you can continue from step 2 in the
+previous section.
+
+
+ABOUT SEARCH TRAJECTORY db.json
+===============================
+
+The db.json stores the search trajectory of all particles (or birds)
+over the course of the search process in the human and machine-readable
+standard. Hence, users who would like to perform further analysis of
+the search process can make use of this file. It stores data using the
+following schemata:
+
+    json db schema: {
+        "N": int,            # number of birds
+        "R": int,            # convergence criteria
+        "bests": float,      # energy value of final gbest
+        "bestb": int,        # id of the bird which found the final gbest
+        "besti": int,        # iteration number where the final gbest is found
+        "bestf": str,        # file path of the final gbest PDB
+        "birds": [ bird ]    # a list of birds
+    }
+
+    bird: {                  
+        "iteration": int,    # iternation number
+        "bird": int,         # bird ID
+        "energy": float,     # the ProtPOS score 
+        "position": [float, float, float, float, float, float],  # Rx, Ry, Rz, Tx, Ty, Tz
+        "velocity": [float, float, float, float, float, float],  # Rx, Ry, Rz, Tx, Ty, Tz
+        "gbest": bool,       # whether it is a gbest conformation
+        "fpath": str         # location of PDB file 
+    }
+
+
+CUSTOMERIZE EM & SCORING USING METHODS OTHER THAN GROMACS
+=========================================================
+
+By default, ProtPOS uses GROMACS to perform energy minimization (EM)
+and scoring (i.e. evaluating the fitness) of a newly generated
+conformation. However, users are free to adopt other software to
+perform these two steps by replacing the content of "score.sh". This
+bash script should take a PDB file as an input (as the first parameter
+$1), perform EM and scoring, then output the protein-surface
+interaction energies to the file "energy.xvg" at the current directory
+containing line(s) of the following format:
+
+    100.0000  -197.174576  -49.886299
+
+The 1st column is the EM iteration number, the 2nd column is the
+electrostatics energy, and the 3rd column is the vdW energy. The
+ProtPOS score is simply the summation of the electrostatics and vdW
+energies. If the file contains more than one lines, e.g. energies
+evolution of the EM process, only the last line will be used. Besides,
+users are free to choose the unit of the energy (kJ/mol or kcal/mol)
+as long as they are consistently used throughout the energy
+calculations.
+
+
+
+CITATION
+==========================
+Method paper:
+Jimmy C. F. Ngai, Pui-In Mak, and Shirley W. I. Siu*
+Predicting Favorable Protein Docking Poses on a Solid Surface by
+Particle Swarm Optimization
+In Proceedings of the 2015 IEEE Congress on Evolutionary Computation
+(CEC2015), pp.2745-2752, 2015.
+
+Software paper:
+Jimmy C. F. Ngai, Pui-In Mak, and Shirley W. I. Siu*
+ProtPOS: A Python Package for the Prediction of Protein Preferred
+Orientation on a Surface 
+(submitted)
+

@@ -1,0 +1,674 @@
+Log file opened on Sat Mar 11 01:33:01 2017
+Host: r6i4n11  pid: 16622  rank ID: 0  number of ranks:  1
+         :-) GROMACS - gmx mdrun, VERSION 5.1.4 (double precision) (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra   Sebastian Fritsch 
+  Gerrit Groenhof   Christoph Junghans   Anca Hamuraru    Vincent Hindriksen
+ Dimitrios Karkoulis    Peter Kasson        Jiri Kraus      Carsten Kutzner  
+    Per Larsson      Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2015, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx mdrun, VERSION 5.1.4 (double precision)
+Executable:   /home/z-hou/soft/gromacs/gmx-double-MPI/bin/gmx_mpi_d
+Data prefix:  /home/z-hou/soft/gromacs/gmx-double-MPI
+Command line:
+  gmx mdrun -v -s
+
+GROMACS version:    VERSION 5.1.4
+Precision:          double
+Memory model:       64 bit
+MPI library:        MPI
+OpenMP support:     enabled (GMX_OPENMP_MAX_THREADS = 32)
+GPU support:        disabled
+OpenCL support:     disabled
+invsqrt routine:    gmx_software_invsqrt(x)
+SIMD instructions:  AVX2_256
+FFT library:        Intel MKL
+RDTSCP usage:       enabled
+C++11 compilation:  enabled
+TNG support:        enabled
+Tracing support:    disabled
+Built on:           Tue Mar  7 16:02:29 JST 2017
+Built by:           z-hou@asahi01 [CMAKE]
+Build OS/arch:      Linux 3.0.101-0.47.90-default x86_64
+Build CPU vendor:   GenuineIntel
+Build CPU brand:    Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz
+Build CPU family:   6   Model: 63   Stepping: 2
+Build CPU features: apic avx avx2 clfsh cmov cx8 cx16 f16c fma htt lahf_lm mmx msr nonstop_tsc pcid pclmuldq pdcm pdpe1gb popcnt pse rdrnd rdtscp sse2 sse3 sse4.1 sse4.2 ssse3 tdt x2apic
+C compiler:         /admin/app/intel/impi/5.0.3.048/bin64/mpicc Intel 15.0.3.20150407
+C compiler flags:    -march=core-avx2   -mkl=sequential  -std=gnu99 -w3 -wd177 -wd271 -wd304 -wd383 -wd424 -wd444 -wd522 -wd593 -wd869 -wd981 -wd1418 -wd1419 -wd1572 -wd1599 -wd2259 -wd2415 -wd2547 -wd2557 -wd3280 -wd3346 -wd11074 -wd11076  -O3 -DNDEBUG -ip -funroll-all-loops -alias-const -ansi-alias  
+C++ compiler:       /admin/app/intel/impi/5.0.3.048/bin64/mpicxx Intel 15.0.3.20150407
+C++ compiler flags:  -march=core-avx2   -std=c++0x  -w3 -wd177 -wd271 -wd304 -wd383 -wd424 -wd444 -wd522 -wd593 -wd869 -wd981 -wd1418 -wd1419 -wd1572 -wd1599 -wd2259 -wd2415 -wd2547 -wd2557 -wd3280 -wd3346 -wd11074 -wd11076 -wd1782 -wd2282  -O3 -DNDEBUG -ip -funroll-all-loops -alias-const -ansi-alias  
+Boost version:      1.55.0 (internal)
+
+
+Running on 1 node with total 24 cores, 24 logical cores
+Hardware detected on host r6i4n11 (the node of MPI rank 0):
+  CPU info:
+    Vendor: GenuineIntel
+    Brand:  Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz
+    Family:  6  model: 63  stepping:  2
+    CPU features: apic avx avx2 clfsh cmov cx8 cx16 f16c fma htt lahf_lm mmx msr nonstop_tsc pcid pclmuldq pdcm pdpe1gb popcnt pse rdrnd rdtscp sse2 sse3 sse4.1 sse4.2 ssse3 tdt x2apic
+    SIMD instructions most likely to fit this hardware: AVX2_256
+    SIMD instructions selected at GROMACS compile time: AVX2_256
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+M. J. Abraham, T. Murtola, R. Schulz, S. Páll, J. C. Smith, B. Hess, E.
+Lindahl
+GROMACS: High performance molecular simulations through multi-level
+parallelism from laptops to supercomputers
+SoftwareX 1 (2015) pp. 19-25
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+S. Páll, M. J. Abraham, C. Kutzner, B. Hess, E. Lindahl
+Tackling Exascale Software Challenges in Molecular Dynamics Simulations with
+GROMACS
+In S. Markidis & E. Laure (Eds.), Solving Software Challenges for Exascale 8759 (2015) pp. 3-27
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+S. Pronk, S. Páll, R. Schulz, P. Larsson, P. Bjelkmar, R. Apostolov, M. R.
+Shirts, J. C. Smith, P. M. Kasson, D. van der Spoel, B. Hess, and E. Lindahl
+GROMACS 4.5: a high-throughput and highly parallel open source molecular
+simulation toolkit
+Bioinformatics 29 (2013) pp. 845-54
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+B. Hess and C. Kutzner and D. van der Spoel and E. Lindahl
+GROMACS 4: Algorithms for highly efficient, load-balanced, and scalable
+molecular simulation
+J. Chem. Theory Comput. 4 (2008) pp. 435-447
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+D. van der Spoel, E. Lindahl, B. Hess, G. Groenhof, A. E. Mark and H. J. C.
+Berendsen
+GROMACS: Fast, Flexible and Free
+J. Comp. Chem. 26 (2005) pp. 1701-1719
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+E. Lindahl and B. Hess and D. van der Spoel
+GROMACS 3.0: A package for molecular simulation and trajectory analysis
+J. Mol. Mod. 7 (2001) pp. 306-317
+-------- -------- --- Thank You --- -------- --------
+
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+H. J. C. Berendsen, D. van der Spoel and R. van Drunen
+GROMACS: A message-passing parallel molecular dynamics implementation
+Comp. Phys. Comm. 91 (1995) pp. 43-56
+-------- -------- --- Thank You --- -------- --------
+
+Input Parameters:
+   integrator                     = steep
+   tinit                          = 0
+   dt                             = 0.001
+   nsteps                         = 1000
+   init-step                      = 0
+   simulation-part                = 1
+   comm-mode                      = Linear
+   nstcomm                        = 100
+   bd-fric                        = 0
+   ld-seed                        = 3843962549
+   emtol                          = 1000
+   emstep                         = 0.01
+   niter                          = 20
+   fcstep                         = 0
+   nstcgsteep                     = 1000
+   nbfgscorr                      = 10
+   rtpi                           = 0.05
+   nstxout                        = 1
+   nstvout                        = 100
+   nstfout                        = 0
+   nstlog                         = 1000
+   nstcalcenergy                  = 100
+   nstenergy                      = 1
+   nstxout-compressed             = 1
+   compressed-x-precision         = 1000
+   cutoff-scheme                  = Group
+   nstlist                        = 20
+   ns-type                        = Grid
+   pbc                            = xy
+   periodic-molecules             = FALSE
+   verlet-buffer-tolerance        = 0.005
+   rlist                          = 1
+   rlistlong                      = 1
+   nstcalclr                      = 0
+   coulombtype                    = Cut-off
+   coulomb-modifier               = None
+   rcoulomb-switch                = 0
+   rcoulomb                       = 1
+   epsilon-r                      = 1
+   epsilon-rf                     = inf
+   vdw-type                       = Cut-off
+   vdw-modifier                   = None
+   rvdw-switch                    = 0
+   rvdw                           = 1
+   DispCorr                       = No
+   table-extension                = 1
+   fourierspacing                 = 0.12
+   fourier-nx                     = 0
+   fourier-ny                     = 0
+   fourier-nz                     = 0
+   pme-order                      = 4
+   ewald-rtol                     = 1e-05
+   ewald-rtol-lj                  = 0.001
+   lj-pme-comb-rule               = Geometric
+   ewald-geometry                 = 1
+   epsilon-surface                = 0
+   implicit-solvent               = GBSA
+   gb-algorithm                   = OBC
+   nstgbradii                     = 1
+   rgbradii                       = 1
+   gb-epsilon-solvent             = 78.3
+   gb-saltconc                    = 0
+   gb-obc-alpha                   = 1
+   gb-obc-beta                    = 0.8
+   gb-obc-gamma                   = 4.85
+   gb-dielectric-offset           = 0.009
+   sa-algorithm                   = Ace-approximation
+   sa-surface-tension             = 2.25936
+   tcoupl                         = No
+   nsttcouple                     = -1
+   nh-chain-length                = 0
+   print-nose-hoover-chain-variables = FALSE
+   pcoupl                         = No
+   pcoupltype                     = Isotropic
+   nstpcouple                     = -1
+   tau-p                          = 1
+   compressibility (3x3):
+      compressibility[    0]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      compressibility[    1]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      compressibility[    2]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+   ref-p (3x3):
+      ref-p[    0]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      ref-p[    1]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      ref-p[    2]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+   refcoord-scaling               = No
+   posres-com (3):
+      posres-com[0]= 0.00000e+00
+      posres-com[1]= 0.00000e+00
+      posres-com[2]= 0.00000e+00
+   posres-comB (3):
+      posres-comB[0]= 0.00000e+00
+      posres-comB[1]= 0.00000e+00
+      posres-comB[2]= 0.00000e+00
+   QMMM                           = FALSE
+   QMconstraints                  = 0
+   QMMMscheme                     = 0
+   MMChargeScaleFactor            = 1
+qm-opts:
+   ngQM                           = 0
+   constraint-algorithm           = Lincs
+   continuation                   = FALSE
+   Shake-SOR                      = FALSE
+   shake-tol                      = 0.0001
+   lincs-order                    = 4
+   lincs-iter                     = 1
+   lincs-warnangle                = 30
+   nwall                          = 0
+   wall-type                      = 9-3
+   wall-r-linpot                  = -1
+   wall-atomtype[0]               = -1
+   wall-atomtype[1]               = -1
+   wall-density[0]                = 0
+   wall-density[1]                = 0
+   wall-ewald-zfac                = 3
+   pull                           = FALSE
+   rotation                       = FALSE
+   interactiveMD                  = FALSE
+   disre                          = No
+   disre-weighting                = Conservative
+   disre-mixed                    = FALSE
+   dr-fc                          = 1000
+   dr-tau                         = 0
+   nstdisreout                    = 100
+   orire-fc                       = 0
+   orire-tau                      = 0
+   nstorireout                    = 100
+   free-energy                    = no
+   cos-acceleration               = 0
+   deform (3x3):
+      deform[    0]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      deform[    1]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+      deform[    2]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
+   simulated-tempering            = FALSE
+   E-x:
+      n = 0
+   E-xt:
+      n = 0
+   E-y:
+      n = 0
+   E-yt:
+      n = 0
+   E-z:
+      n = 0
+   E-zt:
+      n = 0
+   swapcoords                     = no
+   adress                         = FALSE
+   userint1                       = 0
+   userint2                       = 0
+   userint3                       = 0
+   userint4                       = 0
+   userreal1                      = 0
+   userreal2                      = 0
+   userreal3                      = 0
+   userreal4                      = 0
+grpopts:
+   nrdf:        5877
+   ref-t:           0
+   tau-t:           0
+annealing:          No
+annealing-npoints:           0
+   acc:	           0           0           0
+   nfreeze:           Y           Y           Y           N           N           N
+   energygrp-flags[  0]: 0 0
+   energygrp-flags[  1]: 0 1
+
+Using 1 MPI process
+
+
+NOTE: This file uses the deprecated 'group' cutoff_scheme. This will be
+removed in a future release when 'verlet' supports all interaction forms.
+
+Table routines are used for coulomb: FALSE
+Table routines are used for vdw:     FALSE
+Cut-off's:   NS: 1   Coulomb: 1   LJ: 1
+System total charge: 8.000
+Generated table with 4000 data points for 1-4 COUL.
+Tabscale = 2000 points/nm
+Generated table with 4000 data points for 1-4 LJ6.
+Tabscale = 2000 points/nm
+Generated table with 4000 data points for 1-4 LJ12.
+Tabscale = 2000 points/nm
+Potential shift: LJ r^-12: 0.000e+00 r^-6: 0.000e+00, Coulomb -0e+00
+Removing pbc first time
+Initiating Steepest Descents
+Max number of connections per atom is 111
+Total number of connections is 1019224
+Max number of graph edges per atom is 4
+Total number of graph edges is 49166
+Started Steepest Descents on rank 0 Sat Mar 11 01:33:01 2017
+
+Steepest Descents:
+   Tolerance (Fmax)   =  1.00000e+03
+   Number of steps    =         1000
+Note: The available nonbonded kernels do not support water optimization - disabling.
+
+Grid: 27 x 27 x 4 cells
+           Step           Time         Lambda
+              0        0.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle    Proper Dih. Ryckaert-Bell.GB Polarization
+    8.56685e+04    2.29353e+04    2.64330e+02   -1.01249e+05    5.45285e+04
+  Nonpolar Sol.          LJ-14     Coulomb-14        LJ (SR)   Coulomb (SR)
+    1.08416e+04    3.09058e+04   -1.79350e+04   -3.28351e+03   -2.90535e+04
+      Potential Pressure (bar)
+    5.36231e+04    0.00000e+00
+
+           Step           Time         Lambda
+              1        1.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle    Proper Dih. Ryckaert-Bell.GB Polarization
+    8.22724e+04    2.28161e+04    2.19519e+02   -1.01246e+05    5.45497e+04
+  Nonpolar Sol.          LJ-14     Coulomb-14        LJ (SR)   Coulomb (SR)
+    1.08418e+04    3.08433e+04   -1.79528e+04   -3.55241e+03   -2.90610e+04
+      Potential Pressure (bar)
+    4.97301e+04    0.00000e+00
+
+           Step           Time         Lambda
+              2        2.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle    Proper Dih. Ryckaert-Bell.GB Polarization
+    8.05408e+04    2.39463e+04    7.75911e+01   -1.01246e+05    5.47561e+04
+  Nonpolar Sol.          LJ-14     Coulomb-14        LJ (SR)   Coulomb (SR)
+    1.08447e+04    3.06023e+04   -1.79762e+04   -3.64665e+03   -2.93076e+04
+      Potential Pressure (bar)
+    4.85909e+04    0.00000e+00
+
+           Step           Time         Lambda
+              3        3.00000        0.00000
+
+           Step           Time         Lambda
+              4        4.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle    Proper Dih. Ryckaert-Bell.GB Polarization
+    7.78210e+04    2.24861e+04    6.79155e+01   -1.01408e+05    5.46773e+04
+  Nonpolar Sol.          LJ-14     Coulomb-14        LJ (SR)   Coulomb (SR)
+    1.08458e+04    3.05859e+04   -1.79477e+04   -3.70284e+03   -2.92796e+04
+      Potential Pressure (bar)
+    4.41455e+04    0.00000e+00
+
+           Step           Time         Lambda
+              5        5.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle    Proper Dih. Ryckaert-Bell.GB Polarization
+    7.78357e+04    2.24867e+04    5.96990e+01   -1.01438e+05    5.46944e+04
+  Nonpolar Sol.          LJ-14     Coulomb-14        LJ (SR)   Coulomb (SR)
+    1.08478e+04    3.04780e+04   -1.79563e+04   -3.71347e+03   -2.93267e+04
+      Potential Pressure (bar)
+    4.39673e+04    0.00000e+00
+
+           Step           Time         Lambda
+              6        6.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle    Proper Dih. Ryckaert-Bell.GB Polarization
+    7.77689e+04    2.23287e+04    5.64204e+01   -1.01455e+05    5.46090e+04
+  Nonpolar Sol.          LJ-14     Coulomb-14        LJ (SR)   Coulomb (SR)
+    1.08480e+04    3.04698e+04   -1.79273e+04   -3.77289e+03   -2.93364e+04
+      Potential Pressure (bar)
+    4.35890e+04    0.00000e+00
+
+           Step           Time         Lambda
+              7        7.00000        0.00000
+
+           Step           Time         Lambda
+              8        8.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle    Proper Dih. Ryckaert-Bell.GB Polarization
+    7.73442e+04    2.22548e+04    5.50551e+01   -1.01474e+05    5.46562e+04
+  Nonpolar Sol.          LJ-14     Coulomb-14        LJ (SR)   Coulomb (SR)
+    1.08487e+04    3.04299e+04   -1.79420e+04   -3.77333e+03   -2.93500e+04
+      Potential Pressure (bar)
+    4.30498e+04    0.00000e+00
+
+           Step           Time         Lambda
+              9        9.00000        0.00000
+
+           Step           Time         Lambda
+             10       10.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle    Proper Dih. Ryckaert-Bell.GB Polarization
+    7.73423e+04    2.22151e+04    5.33308e+01   -1.01487e+05    5.46157e+04
+  Nonpolar Sol.          LJ-14     Coulomb-14        LJ (SR)   Coulomb (SR)
+    1.08492e+04    3.04016e+04   -1.79311e+04   -3.80419e+03   -2.93606e+04
+      Potential Pressure (bar)
+    4.28942e+04    0.00000e+00
+
+           Step           Time         Lambda
+             11       11.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle    Proper Dih. Ryckaert-Bell.GB Polarization
+    7.73119e+04    2.21865e+04    5.20867e+01   -1.01505e+05    5.46372e+04
+  Nonpolar Sol.          LJ-14     Coulomb-14        LJ (SR)   Coulomb (SR)
+    1.08496e+04    3.03681e+04   -1.79366e+04   -3.82021e+03   -2.93732e+04
+      Potential Pressure (bar)
+    4.27706e+04    0.00000e+00
+
+           Step           Time         Lambda
+             12       12.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle    Proper Dih. Ryckaert-Bell.GB Polarization
+    7.73362e+04    2.21643e+04    5.12185e+01   -1.01516e+05    5.46089e+04
+  Nonpolar Sol.          LJ-14     Coulomb-14        LJ (SR)   Coulomb (SR)
+    1.08502e+04    3.03453e+04   -1.79271e+04   -3.84927e+03   -2.93865e+04
+      Potential Pressure (bar)
+    4.26775e+04    0.00000e+00
+
+           Step           Time         Lambda
+             13       13.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle    Proper Dih. Ryckaert-Bell.GB Polarization
+    7.73189e+04    2.21443e+04    5.05004e+01   -1.01530e+05    5.45852e+04
+  Nonpolar Sol.          LJ-14     Coulomb-14        LJ (SR)   Coulomb (SR)
+    1.08507e+04    3.03162e+04   -1.79333e+04   -3.86361e+03   -2.93538e+04
+      Potential Pressure (bar)
+    4.25853e+04    0.00000e+00
+
+           Step           Time         Lambda
+             14       14.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle    Proper Dih. Ryckaert-Bell.GB Polarization
+    7.73675e+04    2.21343e+04    5.00716e+01   -1.01538e+05    5.45479e+04
+  Nonpolar Sol.          LJ-14     Coulomb-14        LJ (SR)   Coulomb (SR)
+    1.08512e+04    3.02994e+04   -1.79245e+04   -3.88956e+03   -2.93632e+04
+      Potential Pressure (bar)
+    4.25353e+04    0.00000e+00
+
+           Step           Time         Lambda
+             15       15.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle    Proper Dih. Ryckaert-Bell.GB Polarization
+    7.73687e+04    2.21199e+04    4.95496e+01   -1.01550e+05    5.47237e+04
+  Nonpolar Sol.          LJ-14     Coulomb-14        LJ (SR)   Coulomb (SR)
+    1.08513e+04    3.02719e+04   -1.79311e+04   -3.90256e+03   -2.94922e+04
+      Potential Pressure (bar)
+    4.25095e+04    0.00000e+00
+
+           Step           Time         Lambda
+             16       16.00000        0.00000
+
+           Step           Time         Lambda
+             17       17.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle    Proper Dih. Ryckaert-Bell.GB Polarization
+    7.72582e+04    2.21030e+04    4.94209e+01   -1.01553e+05    5.46922e+04
+  Nonpolar Sol.          LJ-14     Coulomb-14        LJ (SR)   Coulomb (SR)
+    1.08515e+04    3.02660e+04   -1.79269e+04   -3.91433e+03   -2.94768e+04
+      Potential Pressure (bar)
+    4.23495e+04    0.00000e+00
+
+           Step           Time         Lambda
+             18       18.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle    Proper Dih. Ryckaert-Bell.GB Polarization
+    7.73556e+04    2.20793e+04    4.83406e+01   -1.01582e+05    5.47224e+04
+  Nonpolar Sol.          LJ-14     Coulomb-14        LJ (SR)   Coulomb (SR)
+    1.08527e+04    3.01943e+04   -1.79253e+04   -3.97506e+03   -2.95456e+04
+      Potential Pressure (bar)
+    4.22249e+04    0.00000e+00
+
+           Step           Time         Lambda
+             19       19.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle    Proper Dih. Ryckaert-Bell.GB Polarization
+    7.72858e+04    2.20711e+04    4.82690e+01   -1.01585e+05    5.47035e+04
+  Nonpolar Sol.          LJ-14     Coulomb-14        LJ (SR)   Coulomb (SR)
+    1.08527e+04    3.01890e+04   -1.79236e+04   -3.98540e+03   -2.95481e+04
+      Potential Pressure (bar)
+    4.21080e+04    0.00000e+00
+
+           Step           Time         Lambda
+             20       20.00000        0.00000
+
+           Step           Time         Lambda
+             21       21.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle    Proper Dih. Ryckaert-Bell.GB Polarization
+    7.72640e+04    2.20645e+04    4.80152e+01   -1.01589e+05    5.47180e+04
+  Nonpolar Sol.          LJ-14     Coulomb-14        LJ (SR)   Coulomb (SR)
+    1.08529e+04    3.01760e+04   -1.79241e+04   -3.99523e+03   -2.95582e+04
+      Potential Pressure (bar)
+    4.20565e+04    0.00000e+00
+
+           Step           Time         Lambda
+             22       22.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle    Proper Dih. Ryckaert-Bell.GB Polarization
+    7.73135e+04    2.20636e+04    4.77540e+01   -1.01596e+05    5.47564e+04
+  Nonpolar Sol.          LJ-14     Coulomb-14        LJ (SR)   Coulomb (SR)
+    1.08535e+04    3.01599e+04   -1.79228e+04   -4.01398e+03   -2.96186e+04
+      Potential Pressure (bar)
+    4.20427e+04    0.00000e+00
+
+           Step           Time         Lambda
+             23       23.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle    Proper Dih. Ryckaert-Bell.GB Polarization
+    7.72759e+04    2.20569e+04    4.74839e+01   -1.01600e+05    5.47689e+04
+  Nonpolar Sol.          LJ-14     Coulomb-14        LJ (SR)   Coulomb (SR)
+    1.08537e+04    3.01466e+04   -1.79235e+04   -4.02294e+03   -2.96261e+04
+      Potential Pressure (bar)
+    4.19768e+04    0.00000e+00
+
+           Step           Time         Lambda
+             24       24.00000        0.00000
+
+           Step           Time         Lambda
+             25       25.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle    Proper Dih. Ryckaert-Bell.GB Polarization
+    7.72631e+04    2.20532e+04    4.73889e+01   -1.01603e+05    5.47569e+04
+  Nonpolar Sol.          LJ-14     Coulomb-14        LJ (SR)   Coulomb (SR)
+    1.08536e+04    3.01404e+04   -1.79227e+04   -4.03103e+03   -2.96237e+04
+      Potential Pressure (bar)
+    4.19340e+04    0.00000e+00
+
+           Step           Time         Lambda
+             26       26.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle    Proper Dih. Ryckaert-Bell.GB Polarization
+    7.72853e+04    2.20510e+04    4.70242e+01   -1.01609e+05    5.47590e+04
+  Nonpolar Sol.          LJ-14     Coulomb-14        LJ (SR)   Coulomb (SR)
+    1.08539e+04    3.01212e+04   -1.79230e+04   -4.04665e+03   -2.96378e+04
+      Potential Pressure (bar)
+    4.19008e+04    0.00000e+00
+
+           Step           Time         Lambda
+             27       27.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle    Proper Dih. Ryckaert-Bell.GB Polarization
+    7.72799e+04    2.20482e+04    4.69300e+01   -1.01612e+05    5.47584e+04
+  Nonpolar Sol.          LJ-14     Coulomb-14        LJ (SR)   Coulomb (SR)
+    1.08539e+04    3.01152e+04   -1.79220e+04   -4.05519e+03   -2.96447e+04
+      Potential Pressure (bar)
+    4.18683e+04    0.00000e+00
+
+           Step           Time         Lambda
+             28       28.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle    Proper Dih. Ryckaert-Bell.GB Polarization
+    7.73041e+04    2.20480e+04    4.66179e+01   -1.01617e+05    5.47700e+04
+  Nonpolar Sol.          LJ-14     Coulomb-14        LJ (SR)   Coulomb (SR)
+    1.08540e+04    3.00996e+04   -1.79225e+04   -4.06668e+03   -2.96507e+04
+      Potential Pressure (bar)
+    4.18654e+04    0.00000e+00
+
+           Step           Time         Lambda
+             29       29.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle    Proper Dih. Ryckaert-Bell.GB Polarization
+    7.73120e+04    2.20464e+04    4.65245e+01   -1.01620e+05    5.47625e+04
+  Nonpolar Sol.          LJ-14     Coulomb-14        LJ (SR)   Coulomb (SR)
+    1.08542e+04    3.00946e+04   -1.79214e+04   -4.07514e+03   -2.96591e+04
+      Potential Pressure (bar)
+    4.18409e+04    0.00000e+00
+
+           Step           Time         Lambda
+             30       30.00000        0.00000
+
+           Step           Time         Lambda
+             31       31.00000        0.00000
+
+   Energies (kJ/mol)
+           Bond          Angle    Proper Dih. Ryckaert-Bell.GB Polarization
+    7.72595e+04    2.20405e+04    4.63685e+01   -1.01622e+05    5.47718e+04
+  Nonpolar Sol.          LJ-14     Coulomb-14        LJ (SR)   Coulomb (SR)
+    1.08542e+04    3.00869e+04   -1.79219e+04   -4.08013e+03   -2.96637e+04
+      Potential Pressure (bar)
+    4.17718e+04    0.00000e+00
+
+
+Steepest Descents converged to Fmax < 1000 in 32 steps
+Potential Energy  =  4.17717714266841e+04
+Maximum force     =  9.88095843024431e+02 on atom 1015
+Norm of force     =  3.00043366598941e+01
+
+	M E G A - F L O P S   A C C O U N T I N G
+
+ NB=Group-cutoff nonbonded kernels    NxN=N-by-N cluster Verlet kernels
+ RF=Reaction-Field  VdW=Van der Waals  QSTab=quadratic-spline table
+ W3=SPC/TIP3p  W4=TIP4p (single or pairs)
+ V&F=Potential and force  V=Potential only  F=Force only
+
+ Computing:                               M-Number         M-Flops  % Flops
+-----------------------------------------------------------------------------
+ NB Elec. [V&F]                         115.746381         115.746     0.0
+ NB VdW & Elec. [V&F]                   484.923442         484.923     0.1
+ 1,4 nonbonded interactions               2.052960         184.766     0.0
+ Born radii (HCT/OBC)                  2456.169392      449478.999    97.9
+ Born force chain rule                  204.501552        3067.523     0.7
+ NS-Pairs                               239.645098        5032.547     1.1
+ Reset In Box                             0.768320           2.305     0.0
+ Shift-X                                  0.809216           4.855     0.0
+ CG-CoM                                   0.809216           2.428     0.0
+ Bonds                                    0.786656          46.413     0.0
+ Angles                                   1.513184         254.215     0.1
+ Propers                                  0.013632           3.122     0.0
+ RB-Dihedrals                             2.015968         497.944     0.1
+ Virial                                   0.810656          14.592     0.0
+-----------------------------------------------------------------------------
+ Total                                                  459190.378   100.0
+-----------------------------------------------------------------------------
+
+
+     R E A L   C Y C L E   A N D   T I M E   A C C O U N T I N G
+
+On 1 MPI rank
+
+ Computing:          Num   Num      Call    Wall time         Giga-Cycles
+                     Ranks Threads  Count      (s)         total sum    %
+-----------------------------------------------------------------------------
+ Neighbor search        1    1         32       0.893          4.466  20.2
+ Force                  1    1         32       1.125          5.628  25.5
+ Rest                                           2.397         11.985  54.3
+-----------------------------------------------------------------------------
+ Total                                          4.416         22.079 100.0
+-----------------------------------------------------------------------------
+
+               Core t (s)   Wall t (s)        (%)
+       Time:        4.406        4.416       99.8
+               (steps/hour)
+Performance:        26089.5
+Finished mdrun on rank 0 Sat Mar 11 01:33:05 2017

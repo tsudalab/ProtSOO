@@ -1,0 +1,37 @@
+KNOWN BUGS of ProtPOS-1.1
+
+The following will be fixed and released in the next version (minor)
+
+------------------------------------------------------------------------
+BUG-001
+
+PROBLEM: When the current directory has no ProtPOS prediction and calling
+clustering analysis, it gives errors:
+
+SUGGESTION: should not run the clustering analysis script but tell the user 
+there is no prediction found in current directory
+
+SNAPSHOT: 
+Installation checking passed.
+mv: cannot stat `debug.log': No such file or directory
+mv: cannot stat `residues_energy.txt': No such file or directory
+ls: cannot access cluster/cluster*.pdf: No such file or directory
+0 cluster(s) were found.
+For more details, please look at cluster directory.
+
+------------------------------------------------------------------------
+BUG-002 
+
+PROBLEM: After a run is complete, no way to tell in the log or somewhere 
+what were the ProtPOS run parameters used.  This is a desired feature 
+rather than a problem.
+
+SUGGESTION: Save somewhere what are the parameters of this run
+
+------------------------------------------------------------------------
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+Working directory is /home/z-hou/experiment-soo/opt/01-testcase-soo
+Running on host r6i0n14
+Time is Sun Mar 19 22:43:59 JST 2017
+Directory is /home/z-hou/experiment-soo/opt/01-testcase-soo
+This jobs runs on the following processors:
+r6i0n14.ice.nims.go.jp r6i0n14.ice.nims.go.jp r6i0n14.ice.nims.go.jp r6i0n14.ice.nims.go.jp r6i0n14.ice.nims.go.jp r6i0n14.ice.nims.go.jp r6i0n14.ice.nims.go.jp r6i0n14.ice.nims.go.jp r6i0n14.ice.nims.go.jp r6i0n14.ice.nims.go.jp r6i0n14.ice.nims.go.jp r6i0n14.ice.nims.go.jp r6i0n14.ice.nims.go.jp r6i0n14.ice.nims.go.jp r6i0n14.ice.nims.go.jp r6i0n14.ice.nims.go.jp r6i0n14.ice.nims.go.jp r6i0n14.ice.nims.go.jp r6i0n14.ice.nims.go.jp r6i0n14.ice.nims.go.jp r6i0n14.ice.nims.go.jp r6i0n14.ice.nims.go.jp r6i0n14.ice.nims.go.jp r6i0n14.ice.nims.go.jp r6i0n17.ice.nims.go.jp r6i0n17.ice.nims.go.jp r6i0n17.ice.nims.go.jp r6i0n17.ice.nims.go.jp r6i0n17.ice.nims.go.jp r6i0n17.ice.nims.go.jp r6i0n17.ice.nims.go.jp r6i0n17.ice.nims.go.jp r6i0n17.ice.nims.go.jp r6i0n17.ice.nims.go.jp r6i0n17.ice.nims.go.jp r6i0n17.ice.nims.go.jp r6i0n17.ice.nims.go.jp r6i0n17.ice.nims.go.jp r6i0n17.ice.nims.go.jp r6i0n17.ice.nims.go.jp r6i0n17.ice.nims.go.jp r6i0n17.ice.nims.go.jp r6i0n17.ice.nims.go.jp r6i0n17.ice.nims.go.jp r6i0n17.ice.nims.go.jp r6i0n17.ice.nims.go.jp r6i0n17.ice.nims.go.jp r6i0n17.ice.nims.go.jp
+This job has allocated 48 cpus
+=>> PBS: job killed: walltime 172855 exceeded limit 172800

@@ -1,0 +1,29 @@
+#!/bin/bash
+#QSUB2 queue qM
+#QSUB2 core 48
+#QSUB2 mpi  48 
+#QSUB2 smp  1
+#QSUB2 wtime 48:00:00
+#PBS -N sg 
+#PBS -j oe
+
+cd $PBS_O_WORKDIR
+NPROCS=`cat $PBS_NODEFILE| wc -l`
+. /etc/profile.d/modules.sh
+#module load Recommend/comp1
+module load  Set/intel15-intelmpi  fftw/3.3.4-intel15   intel/15.0.0.090   intel-mkl/15.0.0.090  python/2.7.9
+
+echo Working directory is $PBS_O_WORKDIR
+echo Running on host `hostname`
+echo Time is `date`
+echo Directory is `pwd`
+echo This jobs runs on the following processors:
+echo `cat $PBS_NODEFILE`
+echo This job has allocated $NPROCS cpus
+
+export NPROC=48
+pwd=`pwd`
+#mpijob -mpi $NPROC  -smp 1 /home/z-hou/soft/protpos-1.1-stable/testcase/predict.sh  2>&1
+
+bash $pwd/predict.sh  >  log.job 2>&1
+
